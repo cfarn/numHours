@@ -1,0 +1,142 @@
+/* Styles pour numHours */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #222;
+    font-family: 'Roboto', sans-serif;
+}
+
+#page {
+    background: linear-gradient(#000, lightgrey); /* dégradé */
+    margin: 0 auto; /* centrer la page */
+    max-width: 900px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid #fff;
+    font-weight: 300; /* texte courant */
+    font-size: 1em; /* initialiser la taille des textes */
+}
+
+/* menu */
+#navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: clamp(.7em, 3vw, 1em);
+    width: 145px;
+    height: 20px;
+    margin: 3% 0 3% 3%;
+    padding: 2%;
+    border: 1px solid #fff;
+}
+
+.nav:hover {
+    background-color: #fff;
+    color: #222;
+    transition: ease-in-out .8s;
+}
+
+/* titres */
+.title {
+    font-family: 'Unica One', cursive;
+}
+
+/* header */
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#logo {
+    width: 20%;
+}
+
+#logo img {
+    width: 100%;
+}
+
+#hero {
+    width: 75%;
+    color: #fff;
+}
+
+#hero h1 {
+    margin: 1%;
+    font-size: clamp(1.5em, 5vw, 2.3em);
+}
+
+#hero video {
+    width: 100%;
+    padding: 2%;
+}
+
+.background {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #fff;
+    height: 410px;
+}
+
+/* contenu principal */
+.container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    border: 1px solid #fff;
+    padding: 2%;
+    margin-top: 2%;
+}
+
+/* footer */
+footer {
+    text-align: right;
+}
+
+/* media-queries pour les écrans inférieurs à 740px */
+@media screen and (max-width: 740px) {
+    /* afficher les éléments en pleine largeur */
+    #page, #hero, .container, .items {
+        width: 100%;    
+    }
+
+    #page {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    #logo {
+        width: 165px;
+        margin-bottom: 2%;
+    }
+
+    /* positionner les éléments en colonnes */
+    .container, #header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .background {
+        height: 100%;
+    }
+}
